@@ -10,7 +10,7 @@ class Visitor
     result = mailchimp.lists(list_id).members.create(
       body: {
         email_address: self.email,
-        status: 'subscribed'
+        status: 'pending'
     })
     Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
   end
